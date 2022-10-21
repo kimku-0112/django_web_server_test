@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+			crossorigin="anonymous"
+		/>
+
+		<!-- google material icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Symbols+Outlined"
+			rel="stylesheet"
+		/>
+
+		<!-- load static css-->
+		<link rel="stylesheet" href="{% static '/css/test.css' %}" />
+
+		<!--load static favicon-->
+		<link rel="icon" href="{%static 'img/favicon.ico' %}" />
+
+		<title>Simple Is Best</title>
+	</head>
+	<body>
+		<nav
+			class="navbar navbar-expand-lg navbar-light bg-light"
+			style="width: 100%; height: 60px; position: fixed; outline: 1px lightgray solid;"
+		>
+			<div class="container">
+				<!-- add instargram image -->
+				<p>
+					Simple Is Best
+				</p>
+
+				<!-- add Search bar -->
+				<input
+					class="form-control"
+					style="width: 200px;"
+					type="search"
+					placeholder="Search"
+					aria-label="Search"
+				/>
+
+				<div style="display: flex;">
+					<div style="display: flex; height: 40px; padding: 10px 0px;">
+						<!-- add google material icons -->
+						<span class="material-icons">home</span>
+						<span class="material-icons">send</span>
+						<span id="add_feed" class="material-icons-outlined">add_box</span>
+						<span class="material-icons-outlined">explore</span>
+						<span class="material-icons-outlined">favorite_border</span>
+					</div>
+					<div>
+						<div class="profile_box">
+							<img class="profile_img" src="data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAb1BMVEX///8AAADR0dH8/Pyurq6pqan09PTi4uLb29vV1dVYWFjv7+/f39+4uLi1tbX39/eCgoLo6OgVFRUkJCTGxsZdXV0ODg5ISEijo6O+vr6Li4udnZ0eHh47Ozs0N
+DR8fHxPT0+VlZUsLCxycnJpaWnhYAQDAAADs0lEQVRoge1a6ZaqMAxmk8UFBFl0RBSd93/GGa9NWxyWtISZc8/p91NCPpo0S1Mty8DAwMDAwMDgv0EShFEUBv6vkqb5tbrU9jeyprqe0t9h9eOitDsoi3izOG1yPtg9qNuFbR6XfbT/4C1Iu7kN0n6jW
+szepzHaJ07L8B6neG37vARv26FY748nxzmt9uvOzx/0vPJ6b6vUhd/djSd7nnzNubSJcrf7zM0l6pyWdyOtye15LtmDNo8JT0b9AqHwAyVvDFqzwVj1a5AhzCR+xnSWIzliw5npEgmPpAE7v8CtTRZTmzsuVmCHHaiWDB6+9e1nCS5EFZWXYUtPhigE+
+42Gd1viFmyJT9ySEENRWk2Lekx0R0J8ZdoQPYbPRB8kxJeXsvW0pS2reMleKHiTg0J0frCASgiIgwztYu7kkmJ3QUJC9TUQUKMpDomI6XIwwqGK8AScvyKO/srUQflHmwvCaY8RhnAiOdBAAsHIsgTSUPBaD+Y3RJWFlPlJQgzlGFFld3hRBKAsImzNL
+G2HJMQWNBaTwQmRV9HwWisbuWRY8JGIOIXGdSKUoQ3IyA4TLDqx7S0q4lHgJ6d6JKR8aIIJG3ruZbsZPsI0IEPl4Sd4x2zXQb9EwIdBFaZFQmNrc3h9imPxnKa15dgJzesf8RwV4mlMyyvt7Cd1LK3aPUm0hDuaY2/LWLdeHoa51xadn6/0vO9jn14sM
+PR5YjfFS+5fQNA7QAXUxPtZwPnMxojLgnjUxBAWY6wvrCm6yy7c/TTtEw+KU5MEZ9S7MjJSe5/f1V8eK2+X5ztv9bi8P6OLqaQ7oa3Ob56MzlVXgKgupo2ste0tT2kry9wHSpgatpJ7D+fBI4J/vAu5mqDNlJPGftSGvlRHhso2Hr7IGdVkkEbC12NTT
+xSEqgfiIJZcufhlXiMiFCFn/mJiPmvkJOoR+jQUq7/yEylXolDwxO2UfrX6BBVKHSvvhVEn6j5wQys2UjysNI2dQBa+KVYcF1JsozeR4CZT9hXMa/Suv1zkhUAf4Ju1ZpqwOxuNTOCCl3TaP6hJWnezMGi7q78Kp92DDi+fUWnMFtsZxrKEo9TbERg/6
+OZ6CAnV92AIoJ3qobyozkNgkKJ97Q/bCzV7lQBttPY01GUKVM+PrAGYcZ2iqYF9b6tPDGGhtjuhEs+4MoPapra7lG5A+qF0l8EBDcyM/hiGvmpFmZWXckZ7nLLGWG3eBs3ijO7YZytWq6qp88Kc5pip+KX/txkYGBgYGBgYTOMLLd0jsGWq3/wAAAAAS
+UVORK5CYII=" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div style="background-color: lightblue; height: 5000px; padding-top: 60px;">
+			<a href="https://simpleisbest.run.goorm.io/">		
+				instargram 만들기 
+			</a>
+			<div>
+				<p>
+					<label for="Timer">남은 시간:</label>
+					<input id="Timer" type="text" value="" readonly />
+				</p>
+			</div>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+			crossorigin="anonymous"
+		></script>
+		<script type="text/javaScript" src="{% static '/javascript/test.js' %}"></script>
+	</body>
+</html>
